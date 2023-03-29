@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import { createGlobalStyle, ThemeProvider } from "styled-components";
-import { theme } from "./theme";
+import { createGlobalStyle } from "styled-components";
 import { RecoilRoot } from "recoil";
 const GlobalStyle = createGlobalStyle`
     html, body, div, span, applet, object, iframe,
@@ -59,9 +58,7 @@ table {
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <RecoilRoot>
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <App />
-    </ThemeProvider>
+    <GlobalStyle />
+    <App />
   </RecoilRoot>
 );

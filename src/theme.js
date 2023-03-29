@@ -1,11 +1,12 @@
-export const theme = {
-  black: {
-    lighter: "#2F2F2F",
-    darker: "181818",
-    veryDark: "#141414",
-  },
-  white: {
-    lighter: "#fff",
-    darker: "e5e5e5",
-  },
+export const darkTheme = {
+  bgColor: "#2f3640",
+  textColor: "white",
+  accentColor: "#9c88ff",
+  cardBgColor: "transparent",
+};
+export const lightTheme = {
+  bgColor: "whitesmoke",
+  textColor: "black",
+  accentColor: "#9c88ff",
+  cardBgColor: "white",
 };
