@@ -7,7 +7,7 @@ export const Card = styled.div`
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   width: 60%;
-  height: 23vh;
+  height: 28vh;
   margin: 20px;
   cursor: pointer;
 `;
@@ -30,8 +30,9 @@ export const Badge = styled.div`
 
 export const Image = styled.img`
   width: 100%;
-  height: 15vh;
+  height: 20vh;
   margin-bottom: 20px;
+  overflow: hidden;
 `;
 
 export const Details = styled.div`
