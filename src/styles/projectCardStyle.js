@@ -46,7 +46,7 @@ export const Title = styled.h2`
   font-size: 1.5em;
 `;
 
-export const Description = styled.p`
+export const Duration = styled.p`
   color: #777;
   font-size: 1em;
   /* position: absolute;

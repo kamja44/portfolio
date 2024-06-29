@@ -4,18 +4,20 @@ import {
   Card,
   Details,
   Image,
-  Description,
+  Duration,
   Title,
 } from "../styles/projectCardStyle";
 import Modal from "./Modal";
 
 const ProjectCard = ({ project }) => {
-  const [selectedProject, setSelectedProject] = useState(null);
-  const handleCardClick = (project) => {
-    setSelectedProject(project);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleCardClick = () => {
+    setIsModalOpen(true);
   };
+
   const handleCloseModal = () => {
-    setSelectedProject(null);
+    setIsModalOpen(false);
   };
 
   return (
@@ -25,14 +27,14 @@ const ProjectCard = ({ project }) => {
         <Badge stack={project.stack}>{project.stack}</Badge>
         <Details>
           <Title>{project.title}</Title>
-          <Description>{project.description}</Description>
+          <Duration>{project.duration}</Duration>
         </Details>
       </Card>
-      {selectedProject && (
+      {isModalOpen && (
         <Modal
-          show={selectedProject !== null}
+          show={isModalOpen}
           onClose={handleCloseModal}
-          project={selectedProject}
+          project={project}
         />
       )}
     </>
