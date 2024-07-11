@@ -76,6 +76,12 @@ export const FeatureList = styled.ul`
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: 10px;
+`;
+export const FeatureListItem = styled.li`
+  text-align: start;
+  margin-left: 20px;
+  margin-top: 5px;
 `;
 
 export const TeamList = styled.ul`

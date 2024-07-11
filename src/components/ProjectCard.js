@@ -6,6 +6,7 @@ import {
   Image,
   Duration,
   Title,
+  Description,
 } from "../styles/projectCardStyle";
 import Modal from "./Modal";
 
@@ -28,6 +29,7 @@ const ProjectCard = ({ project }) => {
         <Details>
           <Title>{project.title}</Title>
           <Duration>{project.duration}</Duration>
+          <Description>{project.description}</Description>
         </Details>
       </Card>
       {isModalOpen && (

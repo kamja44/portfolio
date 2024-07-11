@@ -8,11 +8,11 @@ export const Wrapper = styled.div`
   padding: 20px;
   width: 70vw;
   margin: 0 auto;
-  @media (max-width: 1200px) {
+  @media (max-width: 1800px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1300px) {
     grid-template-columns: 1fr;
   }
 `;

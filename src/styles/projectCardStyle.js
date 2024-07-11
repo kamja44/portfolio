@@ -6,7 +6,7 @@ export const Card = styled.div`
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 80%;
+  width: 60%;
   height: 38vh;
   margin: 20px;
   cursor: pointer;
@@ -44,11 +44,13 @@ export const Details = styled.div`
 export const Title = styled.h2`
   margin: 10px 0;
   font-size: 1.5em;
+  font-weight: bold;
 `;
 
 export const Duration = styled.p`
   color: #777;
   font-size: 1em;
+  font-weight: bold;
   /* position: absolute;
   bottom: 0;
   left: 0;
@@ -57,4 +59,9 @@ export const Duration = styled.p`
   background: rgba(0, 0, 0, 0.5); 
   color: white;
   text-align: center; */
+`;
+
+export const Description = styled.p`
+  font-size: 1em;
+  font-weight: bold;
 `;

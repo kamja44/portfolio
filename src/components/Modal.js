@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   CloseButton,
   Image,
@@ -9,11 +9,25 @@ import {
   StyledLink,
   Heading,
   FeatureList,
+  FeatureListItem,
   TeamList,
 } from "../styles/ModalStyle";
 
 const Modal = ({ show, onClose, project }) => {
+  useEffect(() => {
+    if (show) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [show]);
+
   if (!show) return null;
+
   const handleOverlayClick = (e) => {
     if (e.target === e.currentTarget) {
       onClose();
@@ -49,13 +63,15 @@ const Modal = ({ show, onClose, project }) => {
         </TechStack>
         <Heading>프로젝트 기간</Heading>
         <p>{project.duration}</p>
+        <Heading>프로젝트 기여도</Heading>
+        <p>{project.progressRate}</p>
         <Heading>기능 리스트</Heading>
         <FeatureList>
           {project.features.map((feature, index) => (
-            <li key={index}>{feature}</li>
+            <FeatureListItem key={index}>- {feature}</FeatureListItem>
           ))}
         </FeatureList>
-        {project.team && (
+        {project.team && project.team.length > 0 && (
           <>
             <Heading>팀원</Heading>
             <TeamList>
