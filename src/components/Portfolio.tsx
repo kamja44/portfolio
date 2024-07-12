@@ -1,8 +1,11 @@
 import React from "react";
-import ProjectCard from "./ProjectCard";
+import ProjectCard, { IProject } from "./ProjectCard";
 import { Wrapper } from "../styles/PortfolioStyle";
 
-const Portfolio = ({ projects }) => {
+interface IProjectsPorps {
+  projects: IProject[];
+}
+const Portfolio = ({ projects }: IProjectsPorps) => {
   return (
     <Wrapper>
       {projects.map((project) => (

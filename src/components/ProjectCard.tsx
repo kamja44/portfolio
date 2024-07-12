@@ -9,8 +9,24 @@ import {
   Description,
 } from "../styles/projectCardStyle";
 import Modal from "./Modal";
+export interface IProject {
+  id: number;
+  title: string;
+  description: string;
+  stack: string;
+  image: string;
+  techStack: string[];
+  progressRate: string;
+  duration: string;
+  link: string;
+  features: string[];
+  team?: string[];
+}
+interface IProjectCardProps {
+  project: IProject;
+}
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project }: IProjectCardProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleCardClick = () => {
@@ -24,8 +40,9 @@ const ProjectCard = ({ project }) => {
   return (
     <>
       <Card onClick={handleCardClick}>
+        {}
         <Image src={project.image} alt={project.title} />
-        <Badge stack={project.stack}>{project.stack}</Badge>
+        <Badge $stack={project.stack}>{project.stack}</Badge>
         <Details>
           <Title>{project.title}</Title>
           <Duration>{project.duration}</Duration>

@@ -1,7 +1,7 @@
 import React from "react";
 import Portfolio from "./components/Portfolio";
 import { projects } from "./data/projectData";
-import { Container, Title } from "./styles/AppStyle";
+import { Container, Title } from "./styles/AppStyle.";
 
 const App = () => {
   return (

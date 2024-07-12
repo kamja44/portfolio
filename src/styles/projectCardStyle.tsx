@@ -11,16 +11,19 @@ export const Card = styled.div`
   margin: 20px;
   cursor: pointer;
 `;
+interface IStack {
+  $stack: string;
+}
 
-export const Badge = styled.div`
+export const Badge = styled.div<IStack>`
   position: absolute;
   top: 10px;
   left: 10px;
 
-  ${({ stack }) => {
-    if (stack === "Front-End") return "background: #3498db;";
-    if (stack === "Back-End") return "background: #2ecc71;";
-    if (stack === "Full-Stack") return "background: #9b59b6;";
+  ${({ $stack }) => {
+    if ($stack === "Front-End") return "background: #3498db;";
+    if ($stack === "Back-End") return "background: #2ecc71;";
+    if ($stack === "Full-Stack") return "background: #9b59b6;";
   }}
   color: white;
   padding: 5px 10px;

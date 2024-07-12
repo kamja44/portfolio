@@ -80,7 +80,7 @@ export const projects = [
       "AWS S3를 이용하여 데이터 저장",
       "Fly.io를 이용하여 웹페이지 배포",
     ],
-    team: [""],
+    // team: [""],
   },
   {
     id: 5,
@@ -99,7 +99,7 @@ export const projects = [
       "Django를 이용하여 백엔드 구현",
       "goorm 컨테이너를 이용하여 웹페이지 배포",
     ],
-    team: [""],
+    // team: [""],
   },
   {
     id: 6,
@@ -117,7 +117,7 @@ export const projects = [
       "소셜 로그인 기능 구현",
       "실시간 피드 기능 구현",
     ],
-    team: [""],
+    // team: [""],
   },
   {
     id: 7,
@@ -134,7 +134,7 @@ export const projects = [
       "REST API를 이용하여 영화 데이터 요청 ",
       "웹 프론트엔드 페이지 제작",
     ],
-    team: [""],
+    // team: [""],
   },
   {
     id: 8,
@@ -161,7 +161,7 @@ export const projects = [
       "암호화폐 가격 ApexChart를 이용하여 시각화",
       "다크모드, 라이트모드 기능 구현",
     ],
-    team: [""],
+    // team: [""],
   },
   {
     id: 9,
@@ -187,7 +187,7 @@ export const projects = [
       "recoil을 이용하여 상태 관리",
       "Beautiful DnD를 이용하여 드래그 앤 드롭 애니메이션 구현",
     ],
-    team: [""],
+    // team: [""],
   },
   {
     id: 10,
@@ -204,7 +204,7 @@ export const projects = [
       "웹 프론트엔드 페이지 제작",
       "Flutter를 이용하여 pomodoro App 기능 구현",
     ],
-    team: [""],
+    // team: [""],
   },
   {
     id: 11,
@@ -218,6 +218,6 @@ export const projects = [
     duration: "2024.04 - 진행중",
     link: "",
     features: ["로그인 및 회원가입 기능 구현"],
-    team: [""],
+    // team: [""],
   },
 ];

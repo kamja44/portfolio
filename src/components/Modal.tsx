@@ -12,8 +12,15 @@ import {
   FeatureListItem,
   TeamList,
 } from "../styles/ModalStyle";
+import { IProject } from "./ProjectCard";
 
-const Modal = ({ show, onClose, project }) => {
+interface IModalProps {
+  show: boolean;
+  onClose: () => void;
+  project: IProject;
+}
+
+const Modal = ({ show, onClose, project }: IModalProps) => {
   useEffect(() => {
     if (show) {
       document.body.style.overflow = "hidden";
@@ -28,7 +35,7 @@ const Modal = ({ show, onClose, project }) => {
 
   if (!show) return null;
 
-  const handleOverlayClick = (e) => {
+  const handleOverlayClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
       onClose();
     }
