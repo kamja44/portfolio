@@ -134,7 +134,9 @@ const Experience: React.FC = () => {
                     key={index}
                     variants={itemVariants}
                     whileHover={{ x: 4 }}
-                    className="relative pl-8 border-l-4 border-primary-500"
+                    className={`relative pl-8 border-l-4 border-primary-500 ${
+                      index > 0 ? "mt-8" : ""
+                    }`}
                   >
                     {/* Timeline dot */}
                     <div className="absolute -left-3 top-0 w-6 h-6 bg-primary-500 rounded-full border-4 border-white dark:border-dark-900"></div>
