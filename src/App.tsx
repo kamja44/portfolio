@@ -1,14 +1,37 @@
-import React from "react";
-import Portfolio from "./components/Portfolio";
-import { projects } from "./data/projectData";
-import { Container, Title } from "./styles/AppStyle.";
+import React from 'react';
+import { motion } from 'framer-motion';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import About from './components/About';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Experience from './components/Experience';
+import Contact from './components/Contact';
+import { ThemeProvider } from './contexts/ThemeContext';
+import './index.css';
+import './styles.css';
 
-const App = () => {
+const App: React.FC = () => {
   return (
-    <Container>
-      <Title>kamja44's Portfolio</Title>
-      <Portfolio projects={projects} />
-    </Container>
+    <ThemeProvider>
+      <div className="min-h-screen app-background transition-colors duration-300">
+        <Header />
+        <main>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Hero />
+            <About />
+            <Skills />
+            <Projects />
+            <Experience />
+            <Contact />
+          </motion.div>
+        </main>
+      </div>
+    </ThemeProvider>
   );
 };
 
