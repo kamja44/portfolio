@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, Search, X } from 'lucide-react';
 import { projects } from '../data/projectData';
+import { Project, ProjectFilter } from '../types/project';
 
 const Projects: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedFilter, setSelectedFilter] = useState('All');
-  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [selectedFilter, setSelectedFilter] = useState<ProjectFilter>('All');
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const filters = ['All', 'Front-End', 'Full-Stack', 'Back-End'];
+  const filters: ProjectFilter[] = ['All', 'Front-End', 'Full-Stack', 'Back-End'];
 
   const filteredProjects = projects.filter(project => {
     const matchesSearch = searchTerm === '' || 

@@ -10,7 +10,6 @@ import Experience from './components/Experience';
 import Contact from './components/Contact';
 import { ThemeProvider } from './contexts/ThemeContext';
 import './index.css';
-import './styles.css';
 
 const App: React.FC = () => {
   return (
