@@ -126,7 +126,7 @@ const Projects: React.FC = () => {
                   {/* Project Image */}
                   <div className="relative mb-6 overflow-hidden rounded-xl">
                     <img
-                      src={project.image}
+                      src={`${import.meta.env.BASE_URL}${project.image}`}
                       alt={project.title}
                       className="w-full h-48 object-cover transition-transform duration-300"
                       loading="lazy"
@@ -250,7 +250,7 @@ const Projects: React.FC = () => {
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <img
-                    src={selectedProject.image}
+                    src={`${import.meta.env.BASE_URL}${selectedProject.image}`}
                     alt={selectedProject.title}
                     className="w-full h-64 object-cover rounded-xl mb-6"
                   />
