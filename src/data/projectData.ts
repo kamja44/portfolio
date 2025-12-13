@@ -46,7 +46,7 @@ export const projects: Project[] = [
       "Google Analytics",
     ],
     progressRate: "Front-End 100%",
-    duration: "2024.08 - 현재",
+    duration: "2025.08 - 현재",
     link: "",
     features: [
       "Vue → React 마이그레이션: 복잡한 UX 요구사항 처리 한계 및 Back Office와의 기술 스택 불일치 문제 해결, 클라이언트 팀과의 협업 강화 및 컴포넌트 재사용성 향상",
@@ -124,7 +124,7 @@ export const projects: Project[] = [
       "Hugging Face",
     ],
     progressRate: "Front-End 100% Back-End 100%",
-    duration: "2024.10 - 2024.11",
+    duration: "2025.10",
     link: "",
     features: [
       "AI/ML 파이프라인 구축: OpenAI CLIP 모델 기반 이미지 임베딩 생성 및 코사인 유사도 검색 알고리즘 구현",
@@ -157,7 +157,7 @@ export const projects: Project[] = [
       "TanStack Query",
     ],
     progressRate: "Front-End 100% Back-End 100%",
-    duration: "2024.09 - 진행중",
+    duration: "2025.09 - 진행중",
     link: "",
     features: [
       "마이크로서비스 아키텍처: NestJS 메인 서비스 + FastAPI AI 서비스로 분리된 모노레포 구조 설계 및 구현",

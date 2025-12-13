@@ -43,5 +43,8 @@ build
 
 .claude
 
+# Notion scripts with API tokens
+scripts/
+
 # Windows reserved names
 nul

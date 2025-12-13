@@ -65,11 +65,11 @@ export const opensourceContributions: OpenSourceContribution[] = [
   },
   {
     id: 2,
-    project: "gemini-cli",
-    description: "AI-powered CLI tool for Google's Gemini API",
-    repoUrl: "https://github.com/google-gemini/generative-ai-js",
-    stars: 1500,
-    weeklyDownloads: "150K",
+    project: "google-gemini/gemini-cli",
+    description: "Official CLI for Google's Gemini AI - Build AI-powered applications from the command line",
+    repoUrl: "https://github.com/google-gemini/gemini-cli",
+    stars: 87100,
+    weeklyDownloads: "300K",
     prs: [
       {
         number: 4287,
@@ -77,7 +77,7 @@ export const opensourceContributions: OpenSourceContribution[] = [
         description:
           "Replaced the TODO in loadCodeAssist test with a realistic LoadCodeAssistResponse mock. Added assertions to validate key response fields like currentTier and allowedTiers.",
         status: "merged",
-        link: "https://github.com/google-gemini/generative-ai-js/pull/4287",
+        link: "https://github.com/google-gemini/gemini-cli/pull/4287",
       },
       {
         number: 4575,
@@ -85,7 +85,7 @@ export const opensourceContributions: OpenSourceContribution[] = [
         description:
           "Unified partToString to handle both plain text and verbose summary modes, replacing partListUnionToString with a thin wrapper. Consolidated related tests into partUtils.test.ts, removing redundancy and improving maintainability.",
         status: "merged",
-        link: "https://github.com/google-gemini/generative-ai-js/pull/4575",
+        link: "https://github.com/google-gemini/gemini-cli/pull/4575",
       },
       {
         number: 14701,
