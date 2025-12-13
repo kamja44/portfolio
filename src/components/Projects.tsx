@@ -132,8 +132,17 @@ const Projects: React.FC = () => {
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 transition-opacity duration-300"></div>
-                    <div className={`absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${getStackColor(project.stack)}`}>
-                      {project.stack}
+                    <div className="absolute top-3 left-3 right-3 flex justify-between items-start">
+                      <div className={`px-3 py-1 rounded-full text-xs font-medium text-white ${
+                        project.projectType === 'Company'
+                          ? 'bg-gradient-to-r from-indigo-500 to-blue-500'
+                          : 'bg-gradient-to-r from-orange-500 to-pink-500'
+                      }`}>
+                        {project.projectType === 'Company' ? '회사 프로젝트' : '사이드 프로젝트'}
+                      </div>
+                      <div className={`px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${getStackColor(project.stack)}`}>
+                        {project.stack}
+                      </div>
                     </div>
                   </div>
 
@@ -236,9 +245,25 @@ const Projects: React.FC = () => {
               className="project-modal"
             >
               <div className="flex justify-between items-start mb-6">
-                <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
-                  {selectedProject.title}
-                </h2>
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
+                      {selectedProject.title}
+                    </h2>
+                  </div>
+                  <div className="flex gap-2">
+                    <span className={`px-3 py-1 rounded-full text-xs font-medium text-white ${
+                      selectedProject.projectType === 'Company'
+                        ? 'bg-gradient-to-r from-indigo-500 to-blue-500'
+                        : 'bg-gradient-to-r from-orange-500 to-pink-500'
+                    }`}>
+                      {selectedProject.projectType === 'Company' ? '회사 프로젝트' : '사이드 프로젝트'}
+                    </span>
+                    <span className={`px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${getStackColor(selectedProject.stack)}`}>
+                      {selectedProject.stack}
+                    </span>
+                  </div>
+                </div>
                 <button
                   onClick={() => setSelectedProject(null)}
                   className="p-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors"

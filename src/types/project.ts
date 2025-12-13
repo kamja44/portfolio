@@ -10,6 +10,7 @@ export interface Project {
   link: string;
   features: string[];
   team?: string[];
+  projectType: 'Company' | 'Side';
 }
 
 export type ProjectFilter = 'All' | 'Front-End' | 'Full-Stack' | 'Back-End';

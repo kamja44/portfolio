@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ChevronDown, Github, Mail, ExternalLink } from "lucide-react";
+import { userData } from "../data/userData";
 
 const Hero: React.FC = () => {
   const scrollToAbout = () => {
@@ -60,7 +61,7 @@ const Hero: React.FC = () => {
             variants={itemVariants}
             className="text-5xl md:text-7xl font-bold mb-6"
           >
-            저는 <span className="gradient-text">전형호</span>
+            저는 <span className="gradient-text">{userData.name}</span>
             입니다
           </motion.h1>
 
@@ -69,17 +70,14 @@ const Hero: React.FC = () => {
             variants={itemVariants}
             className="text-2xl md:text-3xl font-semibold text-gray-600 dark:text-gray-300 mb-8"
           >
-            소프트웨어 엔지니어 · 프론트엔드 & AI/ML
+            {userData.jobTitle}
           </motion.h2>
 
           <motion.p
             variants={itemVariants}
             className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed"
           >
-            웹 개발로 커리어를 시작해 rPPG 기반 생체신호와 AI/ML을 탐구했으며,
-            지금은 프론트엔드에서 사용자 경험과 인공지능을 연결합니다. React,
-            TypeScript, Python을 바탕으로 웹 애플리케이션부터 LLM·생성형 AI를
-            활용한 제품까지 구현합니다.
+            {userData.description}
           </motion.p>
 
           {/* CTA Buttons */}
@@ -124,7 +122,7 @@ const Hero: React.FC = () => {
             className="flex justify-center space-x-6 mb-16"
           >
             <motion.a
-              href="https://github.com/kamja44"
+              href={userData.github}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.2, y: -2 }}
@@ -136,7 +134,7 @@ const Hero: React.FC = () => {
             </motion.a>
 
             <motion.a
-              href="mailto:gkahslgml@naver.com"
+              href={`mailto:${userData.email}`}
               whileHover={{ scale: 1.2, y: -2 }}
               whileTap={{ scale: 0.9 }}
               className="p-3 bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm rounded-full border border-white/20 dark:border-gray-700/30 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 hover:shadow-lg"

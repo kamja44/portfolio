@@ -30,6 +30,7 @@ export const projects: Project[] = [
       "WCAG/EAA 접근성 준수: 실시간 폼 검증 시스템 구축 및 글로벌 접근성 표준 준수로 규제 대응",
     ],
     team: ["(주)제네시스네스트"],
+    projectType: "Company",
   },
   {
     id: 2,
@@ -55,6 +56,7 @@ export const projects: Project[] = [
       "반응형 디자인: 다양한 디바이스 환경 최적화로 모바일, 태블릿, 데스크탑 완벽 지원",
     ],
     team: ["(주)제네시스네스트"],
+    projectType: "Company",
   },
   {
     id: 3,
@@ -83,6 +85,7 @@ export const projects: Project[] = [
       "DB 쿼리 최적화: 불필요한 테이블 JOIN 제거 및 페이지네이션 구현으로 데이터 로딩 시간 83% 단축 (1분 → 10초)",
     ],
     team: ["(주)진우소프트이노베이션"],
+    projectType: "Company",
   },
   {
     id: 4,
@@ -100,6 +103,7 @@ export const projects: Project[] = [
       "반응형 웹 디자인: Flexbox와 Grid 기반 레이아웃으로 데스크탑, 태블릿, 모바일 전 디바이스 지원",
     ],
     team: ["(주)진우소프트이노베이션"],
+    projectType: "Company",
   },
   {
     id: 5,
@@ -130,6 +134,7 @@ export const projects: Project[] = [
       "배포 전략 수립: Fly.io → Hugging Face 플랫폼 마이그레이션을 통한 AI 모델 호스팅 최적화",
       "최신 기술 스택: React 19, Next.js 16, Tailwind CSS v4 등 2024년 최신 프레임워크 적용 및 학습",
     ],
+    projectType: "Side",
   },
   {
     id: 6,
@@ -162,6 +167,7 @@ export const projects: Project[] = [
       "TypeORM 데이터 모델링: Entity 관계 설정, Repository 패턴, QueryBuilder를 활용한 복잡한 쿼리 구현",
       "React Hook Form 통합: 폼 상태 관리, 실시간 검증, TanStack Query와 결합한 효율적인 데이터 페칭",
     ],
+    projectType: "Side",
   },
   // {
   //   id: 3,

@@ -1,20 +1,21 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Github } from "lucide-react";
+import { userData } from "../data/userData";
 
 const Contact: React.FC = () => {
   const contactInfo = [
     {
       icon: Mail,
       title: "Email",
-      content: "gudgh5007@gmail.com",
-      href: "mailto:gudgh5007@gmail.com",
+      content: userData.email,
+      href: `mailto:${userData.email}`,
       color: "text-red-500",
     },
     {
       icon: MapPin,
       title: "Location",
-      content: "서울, 대한민국",
+      content: userData.location,
       href: "#",
       color: "text-blue-500",
     },
@@ -24,7 +25,7 @@ const Contact: React.FC = () => {
     {
       icon: Github,
       name: "GitHub",
-      href: "https://github.com/kamja44",
+      href: userData.github,
       color: "hover:text-gray-900 dark:hover:text-gray-100",
     },
   ];
@@ -131,7 +132,7 @@ const Contact: React.FC = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <motion.a
-                    href="mailto:gkahslgml@naver.com"
+                    href={`mailto:${userData.email}`}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="btn-primary flex items-center gap-2"
@@ -163,7 +164,7 @@ const Contact: React.FC = () => {
       >
         <div className="container-center section-padding text-center">
           <p className="text-gray-600 dark:text-gray-400">
-            © 2025 전형호 (HyeongHo Jun). Made with React & TypeScript
+            © 2025 {userData.name} (HyeongHo Jun). Made with React & TypeScript
           </p>
         </div>
       </motion.footer>
