@@ -40,7 +40,7 @@ build
 *.sw?
 
 # Project specific
-/public/image
+
 .claude
 
 # Windows reserved names
