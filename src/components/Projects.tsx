@@ -1,29 +1,43 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Github, Search, X } from 'lucide-react';
-import { projects } from '../data/projectData';
-import { Project, ProjectFilter } from '../types/project';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ExternalLink, Github, Search, X } from "lucide-react";
+import { projects } from "../data/projectData";
+import { Project, ProjectFilter } from "../types/project";
 
 const Projects: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedFilter, setSelectedFilter] = useState<ProjectFilter>('All');
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedFilter, setSelectedFilter] = useState<ProjectFilter>("All");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const filters: ProjectFilter[] = ['All', 'Front-End', 'Full-Stack', 'Back-End'];
+  const filters: ProjectFilter[] = [
+    "All",
+    "Front-End",
+    "Full-Stack",
+    "Back-End",
+  ];
 
-  const filteredProjects = projects.filter(project => {
-    const matchesSearch = searchTerm === '' || 
-                         project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         project.techStack.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase())) ||
-                         project.features.some(feature => feature.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesFilter = selectedFilter === 'All' || project.stack === selectedFilter;
+  const filteredProjects = projects.filter((project) => {
+    const matchesSearch =
+      searchTerm === "" ||
+      project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      project.techStack.some((tech) =>
+        tech.toLowerCase().includes(searchTerm.toLowerCase())
+      ) ||
+      project.features.some((feature) =>
+        feature.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    const matchesFilter =
+      selectedFilter === "All" || project.stack === selectedFilter;
     return matchesSearch && matchesFilter;
   });
 
-  console.log('Current filter:', selectedFilter);
-  console.log('Filtered projects count:', filteredProjects.length);
-  console.log('All projects stacks:', projects.map(p => p.stack));
+  console.log("Current filter:", selectedFilter);
+  console.log("Filtered projects count:", filteredProjects.length);
+  console.log(
+    "All projects stacks:",
+    projects.map((p) => p.stack)
+  );
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -48,14 +62,14 @@ const Projects: React.FC = () => {
 
   const getStackColor = (stack: string) => {
     switch (stack) {
-      case 'Front-End':
-        return 'from-blue-500 to-cyan-500';
-      case 'Full-Stack':
-        return 'from-purple-500 to-pink-500';
-      case 'Back-End':
-        return 'from-green-500 to-emerald-500';
+      case "Front-End":
+        return "from-blue-500 to-cyan-500";
+      case "Full-Stack":
+        return "from-purple-500 to-pink-500";
+      case "Back-End":
+        return "from-green-500 to-emerald-500";
       default:
-        return 'from-gray-500 to-gray-600';
+        return "from-gray-500 to-gray-600";
     }
   };
 
@@ -66,7 +80,7 @@ const Projects: React.FC = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
+          viewport={{ once: true, margin: "-100px" }}
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
@@ -84,7 +98,10 @@ const Projects: React.FC = () => {
             <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
               {/* Search */}
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500" size={20} />
+                <Search
+                  className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500"
+                  size={20}
+                />
                 <input
                   type="text"
                   placeholder="프로젝트 검색..."
@@ -101,7 +118,9 @@ const Projects: React.FC = () => {
                     key={filter}
                     onClick={() => setSelectedFilter(filter)}
                     className={`filter-button ${
-                      selectedFilter === filter ? 'filter-button-active' : 'filter-button-inactive'
+                      selectedFilter === filter
+                        ? "filter-button-active"
+                        : "filter-button-inactive"
                     }`}
                   >
                     {filter}
@@ -123,89 +142,94 @@ const Projects: React.FC = () => {
                 onClick={() => setSelectedProject(project)}
                 className="project-card"
               >
-                  {/* Project Image */}
-                  <div className="relative mb-6 overflow-hidden rounded-xl">
-                    <img
-                      src={`${import.meta.env.BASE_URL}${project.image}`}
-                      alt={project.title}
-                      className="w-full h-48 object-cover transition-transform duration-300"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 transition-opacity duration-300"></div>
-                    <div className="absolute top-3 left-3 right-3 flex justify-between items-start">
-                      <div className={`px-3 py-1 rounded-full text-xs font-medium text-white ${
-                        project.projectType === 'Company'
-                          ? 'bg-gradient-to-r from-indigo-500 to-blue-500'
-                          : 'bg-gradient-to-r from-orange-500 to-pink-500'
-                      }`}>
-                        {project.projectType === 'Company' ? '회사 프로젝트' : '사이드 프로젝트'}
-                      </div>
-                      <div className={`px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${getStackColor(project.stack)}`}>
-                        {project.stack}
-                      </div>
+                {/* Project Image */}
+                <div className="relative mb-6 overflow-hidden rounded-xl">
+                  <img
+                    src={`${import.meta.env.BASE_URL}${project.image}`}
+                    alt={project.title}
+                    className="w-full h-48 object-cover transition-transform duration-300"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 transition-opacity duration-300"></div>
+                  <div className="absolute top-3 left-3 right-3 flex justify-between items-start">
+                    <div
+                      className={`px-3 py-1 rounded-full text-xs font-medium text-white ${
+                        project.projectType === "Company"
+                          ? "bg-gradient-to-r from-indigo-500 to-blue-500"
+                          : "bg-gradient-to-r from-orange-500 to-pink-500"
+                      }`}
+                    >
+                      {project.projectType === "Company"
+                        ? "회사 프로젝트"
+                        : "사이드 프로젝트"}
+                    </div>
+                    <div
+                      className={`px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${getStackColor(
+                        project.stack
+                      )}`}
+                    >
+                      {project.stack}
                     </div>
                   </div>
+                </div>
 
-                  {/* Project Info */}
-                  <div className="space-y-4">
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 transition-colors">
-                      {project.title}
-                    </h3>
-                    
-                    <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                      {project.features[0]}
-                    </p>
+                {/* Project Info */}
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 transition-colors">
+                    {project.title}
+                  </h3>
 
-                    <div className="flex flex-wrap gap-2">
-                      {project.techStack.slice(0, 3).map((tech, index) => (
-                        <span
-                          key={index}
-                          className="tech-badge"
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                    {project.features[0]}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {project.techStack.slice(0, 3).map((tech, index) => (
+                      <span key={index} className="tech-badge">
+                        {tech}
+                      </span>
+                    ))}
+                    {project.techStack.length > 3 && (
+                      <span className="tech-badge-more">
+                        +{project.techStack.length - 3} more
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="flex items-center justify-between pt-4 border-t border-gray-200/30 dark:border-gray-700/30">
+                    <span className="text-sm text-gray-500 dark:text-gray-400">
+                      {project.duration}
+                    </span>
+                    <div className="flex gap-2">
+                      {project.link && (
+                        <motion.a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.9 }}
+                          onClick={(e) => e.stopPropagation()}
+                          className="p-2 bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-lg hover:bg-primary-200 dark:hover:bg-primary-800/50 transition-colors"
+                          title="Live Demo"
                         >
-                          {tech}
-                        </span>
-                      ))}
-                      {project.techStack.length > 3 && (
-                        <span className="tech-badge-more">
-                          +{project.techStack.length - 3} more
-                        </span>
+                          <ExternalLink size={16} />
+                        </motion.a>
+                      )}
+                      {project.link && (
+                        <motion.button
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.9 }}
+                          className="p-2 text-gray-600 dark:text-gray-400 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700/50 transition-all duration-200"
+                          title="View Details"
+                        >
+                          <Github size={16} />
+                        </motion.button>
                       )}
                     </div>
-
-                    <div className="flex items-center justify-between pt-4 border-t border-gray-200/30 dark:border-gray-700/30">
-                      <span className="text-sm text-gray-500 dark:text-gray-400">
-                        {project.duration}
-                      </span>
-                      <div className="flex gap-2">
-                        {project.link && (
-                          <motion.a
-                            href={project.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
-                            onClick={(e) => e.stopPropagation()}
-                            className="p-2 bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-lg hover:bg-primary-200 dark:hover:bg-primary-800/50 transition-colors"
-                            title="Live Demo"
-                          >
-                            <ExternalLink size={16} />
-                          </motion.a>
-                        )}
-                        {project.link && (
-                          <motion.button
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
-                            className="p-2 text-gray-600 dark:text-gray-400 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700/50 transition-all duration-200"
-                            title="View Details"
-                          >
-                            <Github size={16} />
-                          </motion.button>
-                        )}
-                      </div>
-                    </div>
                   </div>
-                </motion.div>
-              ))}
+                </div>
+              </motion.div>
+            ))}
           </div>
 
           {/* No Results */}
@@ -252,14 +276,22 @@ const Projects: React.FC = () => {
                     </h2>
                   </div>
                   <div className="flex gap-2">
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium text-white ${
-                      selectedProject.projectType === 'Company'
-                        ? 'bg-gradient-to-r from-indigo-500 to-blue-500'
-                        : 'bg-gradient-to-r from-orange-500 to-pink-500'
-                    }`}>
-                      {selectedProject.projectType === 'Company' ? '회사 프로젝트' : '사이드 프로젝트'}
+                    <span
+                      className={`px-3 py-1 rounded-full text-xs font-medium text-white ${
+                        selectedProject.projectType === "Company"
+                          ? "bg-gradient-to-r from-indigo-500 to-blue-500"
+                          : "bg-gradient-to-r from-orange-500 to-pink-500"
+                      }`}
+                    >
+                      {selectedProject.projectType === "Company"
+                        ? "회사 프로젝트"
+                        : "사이드 프로젝트"}
                     </span>
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${getStackColor(selectedProject.stack)}`}>
+                    <span
+                      className={`px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${getStackColor(
+                        selectedProject.stack
+                      )}`}
+                    >
                       {selectedProject.stack}
                     </span>
                   </div>
@@ -279,43 +311,63 @@ const Projects: React.FC = () => {
                     alt={selectedProject.title}
                     className="w-full h-64 object-cover rounded-xl mb-6"
                   />
-                  
+
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">기술 스택</h4>
+                      <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                        기술 스택
+                      </h4>
                       <div className="flex flex-wrap gap-2">
-                        {selectedProject.techStack.map((tech: string, index: number) => (
-                          <span
-                            key={index}
-                            className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium"
-                          >
-                            {tech}
-                          </span>
-                        ))}
+                        {selectedProject.techStack.map(
+                          (tech: string, index: number) => (
+                            <span
+                              key={index}
+                              className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium"
+                            >
+                              {tech}
+                            </span>
+                          )
+                        )}
                       </div>
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">개발 기간</h4>
-                      <p className="text-gray-600 dark:text-gray-400">{selectedProject.duration}</p>
+                      <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                        개발 기간
+                      </h4>
+                      <p className="text-gray-600 dark:text-gray-400">
+                        {selectedProject.duration}
+                      </p>
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">기여도</h4>
-                      <p className="text-gray-600 dark:text-gray-400">{selectedProject.progressRate}</p>
+                      <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                        기여도
+                      </h4>
+                      <p className="text-gray-600 dark:text-gray-400">
+                        {selectedProject.progressRate}
+                      </p>
                     </div>
                   </div>
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-4">주요 기능</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-4">
+                    주요 기능
+                  </h4>
                   <ul className="space-y-2 mb-6">
-                    {selectedProject.features.map((feature: string, index: number) => (
-                      <li key={index} className="flex items-start">
-                        <span className="text-primary-600 dark:text-primary-400 mr-2">•</span>
-                        <span className="text-gray-700 dark:text-gray-300">{feature}</span>
-                      </li>
-                    ))}
+                    {selectedProject.features.map(
+                      (feature: string, index: number) => (
+                        <li key={index} className="flex items-start">
+                          <span className="text-primary-600 dark:text-primary-400 mr-2">
+                            •
+                          </span>
+                          <span className="text-gray-700 dark:text-gray-300">
+                            {feature}
+                          </span>
+                        </li>
+                      )
+                    )}
                   </ul>
 
                   <div className="flex gap-4">

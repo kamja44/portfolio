@@ -6,7 +6,7 @@ export const projects: Project[] = [
     title: "KIA/HYUNDAI/GENESIS ONE APP - Back Office",
     description: "글로벌 자동차 브랜드 관리자 시스템 - 앱 콘텐츠 실시간 관리",
     stack: "Front-End",
-    image: "/image/BO.png",
+    image: "image/BO.png",
     techStack: [
       "React",
       "TypeScript",
@@ -37,7 +37,7 @@ export const projects: Project[] = [
     title: "KIA/HYUNDAI/GENESIS ONE APP - Front Office",
     description: "글로벌 자동차 브랜드 사용자 화면 - WebView 기반 콘텐츠 제공",
     stack: "Front-End",
-    image: "/image/FO.png",
+    image: "image/FO.png",
     techStack: [
       "React",
       "TypeScript",
@@ -64,7 +64,7 @@ export const projects: Project[] = [
     description:
       "제주도 전역 전기차 충전기 실시간 모니터링 및 과금 데이터 자동 복구 시스템",
     stack: "Full-Stack",
-    image: "/image/Jeju_Charging.png",
+    image: "image/Jeju_Charging.png",
     techStack: [
       "Node.js",
       "JavaScript (ES6+)",
@@ -93,7 +93,7 @@ export const projects: Project[] = [
     description:
       "세계자연유산 지역 환경 센서 데이터 실시간 수집 및 시각화 웹 시스템",
     stack: "Front-End",
-    image: "/image/Jeju_Monitoring.png",
+    image: "image/Jeju_Monitoring.png",
     techStack: ["JavaScript (ES6+)", "Open API", "Flexbox", "Grid", "HTML/CSS"],
     progressRate: "Front-End 100%",
     duration: "2021.09 - 2022.04",
@@ -110,7 +110,7 @@ export const projects: Project[] = [
     title: "Simpson Finder",
     description: "AI 기반 심슨 캐릭터 닮은꼴 매칭 서비스",
     stack: "Full-Stack",
-    image: "/image/simpson.png",
+    image: "image/simpson.png",
     techStack: [
       "Next.js 16",
       "React 19",
@@ -141,7 +141,7 @@ export const projects: Project[] = [
     title: "AI Recipe Platform",
     description: "AI 기반 재료 추천 및 요리 커뮤니티 플랫폼",
     stack: "Full-Stack",
-    image: "/image/RecipePlatform.png",
+    image: "image/RecipePlatform.png",
     techStack: [
       "Next.js 15",
       "React 19",
