@@ -48,7 +48,7 @@ const About: React.FC = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto mb-6 rounded-full"></div>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               Learning. Building. Growing.
-              <br /> 웹과 AI를 잇는 프론트엔드 개발자
+              <br /> 성능과 사용자 경험을 설계하는 프론트엔드 개발자
             </p>
           </motion.div>
 

@@ -42,3 +42,6 @@ build
 # Project specific
 /public/image
 .claude
+
+# Windows reserved names
+nul

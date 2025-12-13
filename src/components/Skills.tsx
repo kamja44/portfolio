@@ -7,31 +7,33 @@ const Skills: React.FC = () => {
       title: "Frontend",
       color: "from-blue-500 to-cyan-500",
       skills: [
-        { name: "JavaScript (ES6+)", level: 90 },
-        { name: "TypeScript", level: 85 },
-        { name: "React / Next.js", level: 85 },
-        { name: "Flutter", level: 75 },
+        { name: "React / Next.js", level: 90 },
+        { name: "TypeScript", level: 90 },
+        { name: "JavaScript (ES6+)", level: 95 },
+        { name: "TanStack Query", level: 85 },
+        { name: "Zustand / Recoil", level: 85 },
+        { name: "React Hook Form", level: 85 },
       ],
     },
     {
-      title: "Backend",
+      title: "Backend & Tools",
       color: "from-green-500 to-emerald-500",
       skills: [
-        { name: "Node.js (Express, NestJS)", level: 85 },
-        { name: "Spring Boot", level: 80 },
-        { name: "REST API / GraphQL", level: 80 },
-        { name: "MongoDB / PostgreSQL", level: 75 },
-        { name: "Docker & CI/CD", level: 70 },
+        { name: "Node.js / Express", level: 80 },
+        { name: "NestJS", level: 75 },
+        { name: "REST API", level: 85 },
+        { name: "Git / GitHub", level: 90 },
+        { name: "Vite / Webpack", level: 75 },
       ],
     },
     {
       title: "AI & ML",
       color: "from-purple-500 to-pink-500",
       skills: [
-        { name: "Python (Data Analysis)", level: 85 },
-        { name: "TensorFlow / PyTorch", level: 70 },
+        { name: "Python (Data Analysis)", level: 80 },
         { name: "LLM (OpenAI, LangChain)", level: 75 },
-        { name: "Jupyter / Pandas / Numpy", level: 80 },
+        { name: "TensorFlow / PyTorch", level: 70 },
+        { name: "FastAPI", level: 75 },
       ],
     },
   ];
@@ -140,12 +142,12 @@ const Skills: React.FC = () => {
               {[
                 { name: "React", color: "text-blue-500" },
                 { name: "TypeScript", color: "text-blue-600" },
-                { name: "Python", color: "text-yellow-500" },
+                { name: "Next.js", color: "text-gray-900 dark:text-gray-100" },
+                { name: "TanStack Query", color: "text-red-500" },
+                { name: "Tailwind CSS", color: "text-cyan-500" },
+                { name: "MUI", color: "text-blue-400" },
+                { name: "NestJS", color: "text-red-600" },
                 { name: "Node.js", color: "text-green-500" },
-                { name: "Spring Boot", color: "text-green-600" },
-                { name: "TensorFlow", color: "text-orange-500" },
-                { name: "Next.js", color: "text-gray-900" },
-                { name: "Flutter", color: "text-cyan-500" },
               ].map((tech, index) => (
                 <motion.div
                   key={index}
@@ -160,18 +162,6 @@ const Skills: React.FC = () => {
                   </span>
                 </motion.div>
               ))}
-            </div>
-          </motion.div>
-
-          {/* Learning */}
-          <motion.div variants={itemVariants} className="mt-12 text-center">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-100 to-purple-100 dark:from-primary-900/30 dark:to-purple-900/30 rounded-full">
-              <span className="text-primary-600 dark:text-primary-400 font-medium mr-2">
-                🚀 현재 학습 중:
-              </span>
-              <span className="text-gray-700 dark:text-gray-300">
-                Blockchain, NestJS, Docker, CI/CD
-              </span>
             </div>
           </motion.div>
         </motion.div>
