@@ -6,6 +6,9 @@ export const opensourceContributions: OpenSourceContribution[] = [
     project: "react-hook-form",
     description:
       "Performance-focused React form library with minimal re-renders",
+    repoUrl: "https://github.com/react-hook-form/react-hook-form",
+    stars: 41200,
+    weeklyDownloads: "8.5M",
     prs: [
       {
         number: 12932,
@@ -64,6 +67,9 @@ export const opensourceContributions: OpenSourceContribution[] = [
     id: 2,
     project: "gemini-cli",
     description: "AI-powered CLI tool for Google's Gemini API",
+    repoUrl: "https://github.com/google-gemini/generative-ai-js",
+    stars: 1500,
+    weeklyDownloads: "150K",
     prs: [
       {
         number: 4287,
@@ -98,6 +104,9 @@ export const opensourceContributions: OpenSourceContribution[] = [
     id: 3,
     project: "TanStack/query",
     description: "Powerful asynchronous state management for TS/JS",
+    repoUrl: "https://github.com/TanStack/query",
+    stars: 42800,
+    weeklyDownloads: "12M",
     prs: [
       {
         number: 9959,
@@ -116,6 +125,9 @@ export const opensourceContributions: OpenSourceContribution[] = [
     project: "shadcn-ui",
     description:
       "Beautifully designed components built with Radix UI and Tailwind CSS",
+    repoUrl: "https://github.com/shadcn-ui/ui",
+    stars: 78500,
+    weeklyDownloads: "2.8M",
     prs: [
       {
         number: 8985,

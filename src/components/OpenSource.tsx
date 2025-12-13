@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, GitPullRequest, CheckCircle, Clock } from "lucide-react";
+import { ExternalLink, GitPullRequest, CheckCircle, Clock, Star, Download } from "lucide-react";
 import { opensourceContributions } from "../data/opensourceData";
 
 const OpenSource: React.FC = () => {
@@ -78,16 +78,40 @@ const OpenSource: React.FC = () => {
                 className="glass p-8 rounded-2xl hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-start justify-between mb-6">
-                  <div>
+                  <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
-                      <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+                      <motion.a
+                        href={project.repoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.02 }}
+                        className="text-2xl font-bold text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400 transition-colors inline-flex items-center gap-2"
+                      >
                         {project.project}
-                      </h3>
+                        <ExternalLink size={20} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </motion.a>
                       <div className={`w-3 h-3 bg-gradient-to-r ${project.color} rounded-full`}></div>
                     </div>
                     <p className="text-gray-600 dark:text-gray-400 mb-4">
                       {project.description}
                     </p>
+
+                    {/* GitHub Stats */}
+                    <div className="flex items-center gap-6 mb-4">
+                      <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+                        <Star size={16} className="text-yellow-500 fill-yellow-500" />
+                        <span className="text-sm font-semibold">{project.stars.toLocaleString()}</span>
+                        <span className="text-xs text-gray-500 dark:text-gray-400">stars</span>
+                      </div>
+                      {project.weeklyDownloads && (
+                        <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+                          <Download size={16} className="text-green-500" />
+                          <span className="text-sm font-semibold">{project.weeklyDownloads}</span>
+                          <span className="text-xs text-gray-500 dark:text-gray-400">weekly downloads</span>
+                        </div>
+                      )}
+                    </div>
+
                     <div className="flex flex-wrap gap-2 mb-6">
                       {project.techStack.map((tech, techIndex) => (
                         <span

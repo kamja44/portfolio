@@ -32,13 +32,6 @@ const Projects: React.FC = () => {
     return matchesSearch && matchesFilter;
   });
 
-  console.log("Current filter:", selectedFilter);
-  console.log("Filtered projects count:", filteredProjects.length);
-  console.log(
-    "All projects stacks:",
-    projects.map((p) => p.stack)
-  );
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

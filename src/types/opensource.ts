@@ -5,6 +5,9 @@ export interface OpenSourceContribution {
   prs: PullRequest[];
   techStack: string[];
   color: string;
+  repoUrl: string;
+  stars: number;
+  weeklyDownloads?: string;
 }
 
 export interface PullRequest {
