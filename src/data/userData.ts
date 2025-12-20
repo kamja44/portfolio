@@ -10,7 +10,7 @@ export const userData: User = {
     "React와 TypeScript로 사용자 중심의 웹 경험을 만듭니다. 복잡한 UI/UX 문제를 해결하고, 성능 최적화와 개발자 경험 개선에 집중합니다. 프론트엔드 아키텍처 설계부터 AI 통합까지, 기술의 경계를 넘나들며 성장하는 개발자입니다.",
   greeting: "안녕하세요! 저는 전형호입니다.",
   stats: [
-    { number: "4+", label: "년간 개발 경험" },
+    { number: "3+", label: "년간 개발 경험" },
     { number: "6+", label: "프론트엔드 프로젝트" },
     { number: "60%+", label: "성능 개선 달성" },
     { number: "100%", label: "프로젝트 완주율" },
