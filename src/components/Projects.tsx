@@ -67,7 +67,7 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <section id="projects" className="py-20 bg-white/50">
+    <section id="projects" className="py-20">
       <div className="container-center section-padding">
         <motion.div
           variants={containerVariants}

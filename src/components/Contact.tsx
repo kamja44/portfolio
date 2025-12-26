@@ -52,7 +52,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white/50 dark:bg-dark-800/50">
+    <section id="contact" className="py-20">
       <div className="container-center section-padding">
         <motion.div
           variants={containerVariants}
