@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -10,7 +10,7 @@
   }
 
   body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
     @apply leading-relaxed text-gray-900 bg-white transition-all duration-300;
   }
 
@@ -69,6 +69,7 @@
     @apply transition-all duration-300 cursor-pointer no-underline;
     background: linear-gradient(to right, #0ea5e9, #8b5cf6);
     border: none;
+    @apply text-white;
   }
 
   .btn-primary:hover {
@@ -83,7 +84,7 @@
   }
 
   html.dark .btn-secondary {
-    @apply bg-gray-800/50 border-gray-700/30 text-gray-100;
+    @apply bg-gray-800/60 border-gray-600/50 text-gray-100;
   }
 
   .btn-secondary:hover {
@@ -143,7 +144,7 @@
   }
 
   html.dark .contact-card {
-    @apply bg-gray-800/10 border-gray-700/20;
+    @apply bg-gray-800/20 border-gray-600/30;
   }
 
   /* Theme Toggle Button */
@@ -196,7 +197,7 @@
   }
 
   html.dark .search-input {
-    @apply bg-gray-800/50 border-gray-700/30 text-gray-100;
+    @apply bg-gray-800/60 border-gray-600/50 text-gray-100;
   }
 
   html.dark .search-input:focus {
@@ -232,7 +233,7 @@
   }
 
   html.dark .filter-button-inactive {
-    @apply bg-gray-800/50 border-gray-700/30 text-gray-300;
+    @apply bg-gray-800/60 border-gray-600/50 text-gray-200;
   }
 
   html.dark .filter-button-inactive:hover {
@@ -250,7 +251,7 @@
   }
 
   html.dark .project-card {
-    @apply bg-gray-800/10 border-gray-700/20;
+    @apply bg-gray-800/20 border-gray-600/30;
   }
 
   html.dark .project-card:hover {
@@ -264,7 +265,7 @@
   }
 
   html.dark .tech-badge {
-    @apply bg-gray-700/80 text-gray-300;
+    @apply bg-gray-700 text-gray-200;
   }
 
   .tech-badge-more {
@@ -273,15 +274,20 @@
   }
 
   html.dark .tech-badge-more {
-    @apply bg-gray-600/80 text-gray-400;
+    @apply bg-gray-600 text-gray-300;
   }
 }
 
 @layer utilities {
   /* Animation Utilities */
   @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
   }
 
   .animate-float {
@@ -289,8 +295,12 @@
   }
 
   @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   .animate-fade-in {

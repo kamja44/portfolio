@@ -208,12 +208,16 @@ const Projects: React.FC = () => {
                           <ExternalLink size={16} />
                         </motion.a>
                       )}
-                      {project.link && (
+                      {project.githubLink && (
                         <motion.button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            window.open(project.githubLink, "_blank");
+                          }}
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
                           className="p-2 text-gray-600 dark:text-gray-400 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700/50 transition-all duration-200"
-                          title="View Details"
+                          title="View Source Code"
                         >
                           <Github size={16} />
                         </motion.button>
@@ -267,6 +271,19 @@ const Projects: React.FC = () => {
                     <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
                       {selectedProject.title}
                     </h2>
+                    {selectedProject.link && (
+                      <motion.a
+                        href={selectedProject.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="p-2 bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-full hover:bg-primary-200 dark:hover:bg-primary-800/50 transition-colors"
+                        title="Open Live Demo"
+                      >
+                        <ExternalLink size={20} />
+                      </motion.a>
+                    )}
                   </div>
                   <div className="flex gap-2">
                     <span
@@ -299,11 +316,29 @@ const Projects: React.FC = () => {
 
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <img
-                    src={`${import.meta.env.BASE_URL}${selectedProject.image}`}
-                    alt={selectedProject.title}
-                    className="w-full h-64 object-cover rounded-xl mb-6"
-                  />
+                  <div className="relative group">
+                    <img
+                      src={`${import.meta.env.BASE_URL}${
+                        selectedProject.image
+                      }`}
+                      alt={selectedProject.title}
+                      className="w-full h-64 object-cover rounded-xl mb-6"
+                    />
+                    {selectedProject.link && (
+                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl mb-6 flex items-center justify-center">
+                        <motion.a
+                          href={selectedProject.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.95 }}
+                          className="p-3 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-full hover:bg-white/30 transition-colors"
+                        >
+                          <ExternalLink size={24} />
+                        </motion.a>
+                      </div>
+                    )}
+                  </div>
 
                   <div className="space-y-4">
                     <div>
@@ -377,8 +412,11 @@ const Projects: React.FC = () => {
                         Live Demo
                       </motion.a>
                     )}
-                    {selectedProject.link && (
+                    {selectedProject.githubLink && (
                       <motion.button
+                        onClick={() =>
+                          window.open(selectedProject.githubLink, "_blank")
+                        }
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="btn-secondary flex items-center gap-2"

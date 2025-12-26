@@ -125,7 +125,8 @@ export const projects: Project[] = [
     ],
     progressRate: "Front-End 100% Back-End 100%",
     duration: "2025.10",
-    link: "",
+    link: "https://simpson-finder-frontend-ejxiv62db-kamjas-projects.vercel.app/",
+    githubLink: "https://github.com/kamja44/Simpson-Finder",
     features: [
       "AI/ML 파이프라인 구축: OpenAI CLIP 모델 기반 이미지 임베딩 생성 및 코사인 유사도 검색 알고리즘 구현",
       "얼굴 인식 시스템: Face-API.js를 활용한 실시간 얼굴 감지, 특징점 추출, 표정 분석 기능 구현",
@@ -158,7 +159,8 @@ export const projects: Project[] = [
     ],
     progressRate: "Front-End 100% Back-End 100%",
     duration: "2025.09 - 진행중",
-    link: "",
+    link: "https://recipe-platform-dbkb4tskt-kamjas-projects.vercel.app",
+    githubLink: "https://github.com/kamja44/recipe-platform",
     features: [
       "마이크로서비스 아키텍처: NestJS 메인 서비스 + FastAPI AI 서비스로 분리된 모노레포 구조 설계 및 구현",
       "AI 레시피 생성 시스템: OpenAI GPT-3.5 API 연동 및 SSE(Server-Sent Events) 스트리밍 통신으로 실시간 레시피 생성",
