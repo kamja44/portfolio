@@ -2,16 +2,21 @@ export interface Project {
   id: number;
   title: string;
   description: string;
-  stack: "Front-End" | "Full-Stack" | "Back-End";
+  stack: "Front-End" | "Full-Stack" | "Back-End" | "Open Source";
   image: string;
   techStack: string[];
   progressRate: string;
   duration: string;
   link: string;
-  githubLink?: string;
+  github?: string;
   features: string[];
   team?: string[];
   projectType: "Company" | "Side";
 }
 
-export type ProjectFilter = "All" | "Front-End" | "Full-Stack" | "Back-End";
+export type ProjectFilter =
+  | "All"
+  | "Front-End"
+  | "Full-Stack"
+  | "Back-End"
+  | "Open Source";

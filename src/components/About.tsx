@@ -65,21 +65,6 @@ const About: React.FC = () => {
                     <p key={index}>{paragraph}</p>
                   ))}
                 </div>
-
-                <div className="pt-6">
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() =>
-                      document
-                        .querySelector("#contact")
-                        ?.scrollIntoView({ behavior: "smooth" })
-                    }
-                    className="btn-primary"
-                  >
-                    이력서 다운로드
-                  </motion.button>
-                </div>
               </div>
             </motion.div>
 

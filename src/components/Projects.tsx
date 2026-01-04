@@ -14,6 +14,7 @@ const Projects: React.FC = () => {
     "Front-End",
     "Full-Stack",
     "Back-End",
+    "Open Source",
   ];
 
   const filteredProjects = projects.filter((project) => {
@@ -61,6 +62,8 @@ const Projects: React.FC = () => {
         return "from-purple-500 to-pink-500";
       case "Back-End":
         return "from-green-500 to-emerald-500";
+      case "Open Source":
+        return "from-orange-500 to-red-500";
       default:
         return "from-gray-500 to-gray-600";
     }
@@ -208,19 +211,19 @@ const Projects: React.FC = () => {
                           <ExternalLink size={16} />
                         </motion.a>
                       )}
-                      {project.githubLink && (
-                        <motion.button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            window.open(project.githubLink, "_blank");
-                          }}
+                      {project.github && (
+                        <motion.a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
+                          onClick={(e) => e.stopPropagation()}
                           className="p-2 text-gray-600 dark:text-gray-400 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700/50 transition-all duration-200"
-                          title="View Source Code"
+                          title="GitHub"
                         >
                           <Github size={16} />
-                        </motion.button>
+                        </motion.a>
                       )}
                     </div>
                   </div>
@@ -412,18 +415,18 @@ const Projects: React.FC = () => {
                         Live Demo
                       </motion.a>
                     )}
-                    {selectedProject.githubLink && (
-                      <motion.button
-                        onClick={() =>
-                          window.open(selectedProject.githubLink, "_blank")
-                        }
+                    {selectedProject.github && (
+                      <motion.a
+                        href={selectedProject.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="btn-secondary flex items-center gap-2"
                       >
                         <Github size={18} />
                         Source Code
-                      </motion.button>
+                      </motion.a>
                     )}
                   </div>
                 </div>

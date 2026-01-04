@@ -93,35 +93,35 @@ export const opensourceContributions: OpenSourceContribution[] = [
           "fix(core): handle unhandled promise rejection in mcp-client-manager",
         description:
           "Implemented proper error handling for promise rejections in the MCP client manager to prevent application crashes and improve stability.",
-        status: "open",
+        status: "merged",
         link: "https://github.com/google-gemini/gemini-cli/pull/14701",
       },
     ],
     techStack: ["TypeScript", "Node.js", "Testing", "API Integration"],
     color: "from-blue-500 to-cyan-500",
   },
+  // {
+  //   id: 3,
+  //   project: "TanStack/query",
+  //   description: "Powerful asynchronous state management for TS/JS",
+  //   repoUrl: "https://github.com/TanStack/query",
+  //   stars: 42800,
+  //   weeklyDownloads: "12M",
+  //   prs: [
+  //     {
+  //       number: 9959,
+  //       title: "fix(query-core): prevent duplicate abort event listeners",
+  //       description:
+  //         "Fixed a potential memory leak by preventing duplicate abort signal event listeners in infinite query observers.",
+  //       status: "open",
+  //       link: "https://github.com/TanStack/query/pull/9959",
+  //     },
+  //   ],
+  //   techStack: ["TypeScript", "Query Core", "State Management"],
+  //   color: "from-red-500 to-orange-500",
+  // },
   {
     id: 3,
-    project: "TanStack/query",
-    description: "Powerful asynchronous state management for TS/JS",
-    repoUrl: "https://github.com/TanStack/query",
-    stars: 42800,
-    weeklyDownloads: "12M",
-    prs: [
-      {
-        number: 9959,
-        title: "fix(query-core): prevent duplicate abort event listeners",
-        description:
-          "Fixed a potential memory leak by preventing duplicate abort signal event listeners in infinite query observers.",
-        status: "open",
-        link: "https://github.com/TanStack/query/pull/9959",
-      },
-    ],
-    techStack: ["TypeScript", "Query Core", "State Management"],
-    color: "from-red-500 to-orange-500",
-  },
-  {
-    id: 4,
     project: "shadcn-ui",
     description:
       "Beautifully designed components built with Radix UI and Tailwind CSS",
@@ -130,12 +130,20 @@ export const opensourceContributions: OpenSourceContribution[] = [
     weeklyDownloads: "2.8M",
     prs: [
       {
-        number: 8985,
-        title: "refactor(migrations): optimize icon migration performance",
+        number: 9184,
+        title: "fix(cli): add cache to getTargetStyleFromConfig",
         description:
-          "Optimized the performance of the icon migration script, significantly reducing execution time for large projects.",
+          "Implemented caching for getTargetStyleFromConfig function to prevent redundant calls to getProjectInfo(). Eliminates redundant operations and improves overall CLI performance by returning cached results when available.",
         status: "open",
-        link: "https://github.com/shadcn-ui/ui/pull/8985",
+        link: "https://github.com/shadcn-ui/ui/pull/9184",
+      },
+      {
+        number: 9188,
+        title: "feat(ui): add Timeline component",
+        description:
+          "Introduced a new Timeline component to shadcn/ui v4 with multiple layout positions (left, right, alternate, center), flexible marker variants, icon support, and full accessibility. Includes comprehensive documentation and four example implementations.",
+        status: "open",
+        link: "https://github.com/shadcn-ui/ui/pull/9188",
       },
     ],
     techStack: ["React", "TypeScript", "CLI", "Tailwind CSS"],
