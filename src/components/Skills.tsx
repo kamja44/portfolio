@@ -2,42 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Skills: React.FC = () => {
-  const skillCategories = [
-    {
-      title: "Frontend",
-      color: "from-blue-500 to-cyan-500",
-      skills: [
-        { name: "React / Next.js", level: 90 },
-        { name: "TypeScript", level: 90 },
-        { name: "JavaScript (ES6+)", level: 95 },
-        { name: "TanStack Query", level: 85 },
-        { name: "Zustand / Recoil", level: 85 },
-        { name: "React Hook Form", level: 85 },
-      ],
-    },
-    {
-      title: "Backend & Tools",
-      color: "from-green-500 to-emerald-500",
-      skills: [
-        { name: "Node.js / Express", level: 80 },
-        { name: "NestJS", level: 75 },
-        { name: "REST API", level: 85 },
-        { name: "Git / GitHub", level: 90 },
-        { name: "Vite / Webpack", level: 75 },
-      ],
-    },
-    {
-      title: "AI & ML",
-      color: "from-purple-500 to-pink-500",
-      skills: [
-        { name: "Python (Data Analysis)", level: 80 },
-        { name: "LLM (OpenAI, LangChain)", level: 75 },
-        { name: "TensorFlow / PyTorch", level: 70 },
-        { name: "FastAPI", level: 75 },
-      ],
-    },
-  ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -79,60 +43,6 @@ const Skills: React.FC = () => {
             </p>
           </motion.div>
 
-          {/* Skills Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {skillCategories.map((category, categoryIndex) => (
-              <motion.div
-                key={categoryIndex}
-                variants={itemVariants}
-                whileHover={{ y: -5 }}
-                className="glass p-8 rounded-2xl hover:shadow-xl transition-all duration-300"
-              >
-                <div className="flex items-center mb-6">
-                  <div
-                    className={`w-4 h-4 bg-gradient-to-r ${category.color} rounded-full mr-3`}
-                  ></div>
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-                    {category.title}
-                  </h3>
-                </div>
-
-                <div className="space-y-4">
-                  {category.skills.map((skill, skillIndex) => (
-                    <motion.div
-                      key={skillIndex}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{
-                        delay: categoryIndex * 0.1 + skillIndex * 0.1,
-                      }}
-                      viewport={{ once: true }}
-                    >
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="font-medium text-gray-900 dark:text-gray-100">
-                          {skill.name}
-                        </span>
-                      </div>
-                      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          transition={{
-                            duration: 1.5,
-                            delay: categoryIndex * 0.2 + skillIndex * 0.1,
-                            ease: "easeOut",
-                          }}
-                          viewport={{ once: true }}
-                          className={`h-2 bg-gradient-to-r ${category.color} rounded-full`}
-                        ></motion.div>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
           {/* Tech Stack Icons */}
           <motion.div variants={itemVariants} className="mt-16 text-center">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-8">
@@ -142,7 +52,10 @@ const Skills: React.FC = () => {
               {[
                 { name: "React", color: "text-blue-500" },
                 { name: "TypeScript", color: "text-blue-600" },
-                { name: "Next.js", color: "text-gray-900 dark:text-gray-100" },
+                {
+                  name: "Next.js",
+                  color: "text-slate-500 dark:text-slate-400",
+                },
                 { name: "TanStack Query", color: "text-red-500" },
                 { name: "Tailwind CSS", color: "text-cyan-500" },
                 { name: "MUI", color: "text-blue-400" },
