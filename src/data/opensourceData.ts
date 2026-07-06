@@ -3,41 +3,6 @@ import { OpenSourceContribution } from "../types/opensource";
 export const opensourceContributions: OpenSourceContribution[] = [
   {
     id: 1,
-    project: "PixEngine",
-    description:
-      "서비스 정책에 따라 이미지 최적화 방식을 선언적으로 제어하는 정책 기반 이미지 최적화 엔진",
-    repoUrl: "https://github.com/pixengine/pixengine",
-    prs: [
-      {
-        number: 1,
-        title: "정책 기반 이미지 최적화 파이프라인 설계",
-        description:
-          "서비스 요구사항에 따라 포맷, 크기, 품질, 저장 위치를 명시적으로 제어할 수 있는 정책 우선 구조를 설계했습니다.",
-        status: "in-progress",
-        link: "https://github.com/pixengine/pixengine",
-      },
-      {
-        number: 2,
-        title: "교체 가능한 처리 엔진과 스토리지 어댑터 구조",
-        description:
-          "Sharp 기반 처리 엔진과 S3, R2, GCS, Azure Blob Storage를 교체 가능한 모듈로 분리했습니다.",
-        status: "in-progress",
-        link: "https://github.com/pixengine/pixengine",
-      },
-      {
-        number: 3,
-        title: "Express Middleware와 responsive picture helper 제공",
-        description:
-          "애플리케이션에서 최적화 정책을 쉽게 적용할 수 있도록 Express Middleware와 반응형 picture 헬퍼를 제공합니다.",
-        status: "in-progress",
-        link: "https://github.com/pixengine/pixengine",
-      },
-    ],
-    techStack: ["TypeScript", "Node.js", "Sharp", "Express.js", "Storage Adapter"],
-    color: "from-violet-500 to-blue-500",
-  },
-  {
-    id: 2,
     project: "react-hook-form",
     description:
       "React Hook Form Top 20 Contributor로서 폼 라이브러리의 안정성과 테스트 커버리지 개선에 기여",
@@ -72,7 +37,7 @@ export const opensourceContributions: OpenSourceContribution[] = [
     color: "from-pink-500 to-rose-500",
   },
   {
-    id: 3,
+    id: 2,
     project: "google-gemini/gemini-cli",
     description:
       "Google Gemini CLI의 파서 구조, API Mock, MCP Client Manager 안정성 개선에 기여",
