@@ -18,6 +18,7 @@ export const projects: Project[] = [
       "i18n",
     ],
     role: "프론트엔드 구조 설계 및 주요 기능 개발",
+    impact: "AHA 원칙 · 2MD → 1시간",
     problem:
       "브랜드, 국가, 언어별 입력 조건이 계속 늘어나면서 단순 공통 컴포넌트 중심 구조만으로는 신규 요구사항을 빠르게 반영하기 어려웠습니다.",
     decision:
@@ -39,40 +40,6 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    title: "KIA/HYUNDAI/GENESIS ONE APP - Front Office",
-    description: "앱 내 WebView 기반 사용자 화면과 네이티브 연동 안정화",
-    stack: "Front-End",
-    image: "image/FO.png",
-    techStack: [
-      "React",
-      "TypeScript",
-      "TanStack Query",
-      "JavaScript",
-      "Google Analytics",
-      "WebView Bridge",
-    ],
-    role: "WebView 화면 개발 및 장애 원인 분석",
-    problem:
-      "앱 내 WebView 화면은 Android와 iOS 네이티브 브릿지 응답 차이를 함께 고려해야 했고, 전기차 충전 결제 플로우는 사용자 흐름이 길어 개선 여지가 있었습니다.",
-    decision:
-      "GA 데이터를 기준으로 전기차 충전 결제 플로우를 4단계에서 2단계로 줄이고, 네이티브 브릿지 응답값 차이는 프론트엔드 방어 로직으로 표준화했습니다.",
-    result:
-      "사용자 화면의 흐름을 단순화하고 플랫폼별 응답 차이로 인한 예외를 줄였습니다. 배포 후 차량 등록 장애의 원인을 분석하고 대응 방안을 제안해 서비스 안정성 확보에 기여했습니다.",
-    progressRate: "WebView 화면 개발 및 장애 원인 분석",
-    duration: "2025.08 - 현재",
-    link: "",
-    features: [
-      "앱 내 WebView 사용자 화면 개발",
-      "GA 기반 전기차 충전 결제 플로우 4단계 -> 2단계 축약",
-      "Android/iOS 네이티브 브릿지 응답값 차이를 방어 로직으로 표준화",
-      "배포 후 차량 등록 장애 원인 분석 및 대응 방안 제안",
-      "브랜드·국가별 콘텐츠 노출 조건을 고려한 화면 상태 관리",
-    ],
-    team: ["(주)제네시스네스트"],
-    projectType: "Company",
-  },
-  {
-    id: 3,
     title: "Global Insight Admin",
     description: "국가별 요구사항을 분리해 빠르게 구축한 글로벌 관리자 시스템",
     stack: "Front-End",
@@ -86,6 +53,7 @@ export const projects: Project[] = [
       "SCSS",
     ],
     role: "FE 메인 담당",
+    impact: "10MD · 9개 메뉴",
     problem:
       "국가별 요구사항이 동시에 정리되는 상황에서 백엔드 API 완성을 기다리면 화면 개발과 검증 일정이 지연될 수 있었습니다.",
     decision:
@@ -101,6 +69,41 @@ export const projects: Project[] = [
       "국가별 요구사항을 독립적인 구조로 분리",
       "10MD 내 9개 메뉴 UI 및 인터랙션 구현",
       "API 연동 전 화면 흐름과 정책 검증 가능하도록 개발 순서 조정",
+    ],
+    team: ["(주)제네시스네스트"],
+    projectType: "Company",
+  },
+  {
+    id: 3,
+    title: "KIA/HYUNDAI/GENESIS ONE APP - Front Office",
+    description: "앱 내 WebView 기반 사용자 화면과 네이티브 연동 안정화",
+    stack: "Front-End",
+    image: "image/FO.png",
+    techStack: [
+      "React",
+      "TypeScript",
+      "TanStack Query",
+      "JavaScript",
+      "Google Analytics",
+      "WebView Bridge",
+    ],
+    role: "WebView 화면 개발 및 장애 원인 분석",
+    impact: "결제 플로우 4단계 → 2단계",
+    problem:
+      "앱 내 WebView 화면은 Android와 iOS 네이티브 브릿지 응답 차이를 함께 고려해야 했고, 전기차 충전 결제 플로우는 사용자 흐름이 길어 개선 여지가 있었습니다.",
+    decision:
+      "GA 데이터를 기준으로 전기차 충전 결제 플로우를 4단계에서 2단계로 줄이고, 네이티브 브릿지 응답값 차이는 프론트엔드 방어 로직으로 표준화했습니다.",
+    result:
+      "사용자 화면의 흐름을 단순화하고 플랫폼별 응답 차이로 인한 예외를 줄였습니다. 배포 후 차량 등록 장애의 원인을 분석하고 대응 방안을 제안해 서비스 안정성 확보에 기여했습니다.",
+    progressRate: "WebView 화면 개발 및 장애 원인 분석",
+    duration: "2025.08 - 현재",
+    link: "",
+    features: [
+      "앱 내 WebView 사용자 화면 개발",
+      "GA 기반 전기차 충전 결제 플로우 4단계 → 2단계 축약",
+      "Android/iOS 네이티브 브릿지 응답값 차이를 방어 로직으로 표준화",
+      "배포 후 차량 등록 장애 원인 분석 및 대응 방안 제안",
+      "브랜드·국가별 콘텐츠 노출 조건을 고려한 화면 상태 관리",
     ],
     team: ["(주)제네시스네스트"],
     projectType: "Company",
@@ -123,6 +126,7 @@ export const projects: Project[] = [
       "Vitest",
     ],
     role: "오픈소스 설계 및 개발",
+    impact: "Policy First · NPM",
     problem:
       "서비스마다 이미지 최적화 정책, 저장소, 처리 엔진이 달라 하나의 고정된 파이프라인으로는 운영 요구사항을 유연하게 반영하기 어려웠습니다.",
     decision:
@@ -158,6 +162,7 @@ export const projects: Project[] = [
       "REST API",
     ],
     role: "운영 자동화 및 화면 개발",
+    impact: "운영 자동화",
     problem:
       "충전 데이터 누락과 반복적인 운영 확인 작업이 발생해 관리자 업무 부담이 컸습니다.",
     decision:

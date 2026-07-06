@@ -13,7 +13,7 @@
 - Preserve the current single-page portfolio structure and GitHub Pages deployment settings.
 - Use Korean copy with a grounded resume tone.
 - Remove `Learning. Building. Growing.` and `성능과 사용자 경험을 설계하는 프론트엔드 개발자`.
-- Use only reliable metrics: `3개 브랜드`, `50개국`, `40개 언어`, `2MD -> 1시간`, `10MD 내 9개 메뉴`, `React Hook Form Top 20 Contributor`, `주 1회 기술공유회`.
+- Use only reliable metrics: `3개 브랜드`, `50개국`, `40개 언어`, `2MD → 1시간`, `10MD 내 9개 메뉴`, `React Hook Form Top 20 Contributor`, `주 1회 기술공유회`.
 - Do not emphasize Next.js or Tailwind CSS as primary skills.
 - Verify with `npm run build`.
 
@@ -59,7 +59,7 @@
 - Consumes: project narrative fields in project cards and modal.
 
 - [ ] Extend `Project` with narrative fields.
-- [ ] Reorder and rewrite priority projects: Back Office, Front Office, Global Insight Admin, PixEngine.
+- [ ] Reorder and rewrite priority projects: Back Office, Global Insight Admin, Front Office, PixEngine.
 - [ ] Change card summary and modal detail from feature list first to problem/decision/result first.
 - [ ] Preserve tech stack display as secondary context.
 
@@ -72,7 +72,7 @@
 **Interfaces:**
 - Consumes: existing `OpenSourceContribution` shape.
 
-- [ ] Reorder contributions to PixEngine, React Hook Form, Gemini CLI.
+- [ ] Reorder contributions to React Hook Form, Gemini CLI.
 - [ ] Rewrite descriptions and PR entries to match the requested tone.
 - [ ] Emphasize React Hook Form Top 20 Contributor.
 

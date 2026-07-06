@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
           {/* Greeting */}
           <motion.div variants={itemVariants} className="mb-6">
             <span className="inline-block px-4 py-2 bg-primary-100/50 dark:bg-primary-900/20 text-primary-600 dark:text-primary-400 rounded-full text-sm font-medium backdrop-blur-sm border border-primary-200/30 dark:border-primary-700/30">
-              Frontend Engineer · Structure & Collaboration
+              Frontend Engineer · Multi-brand · i18n · Architecture
             </span>
           </motion.div>
 

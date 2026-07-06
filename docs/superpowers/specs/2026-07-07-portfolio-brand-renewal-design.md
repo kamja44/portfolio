@@ -24,7 +24,7 @@ The page should leave the impression that the developer designs structures that 
   - 3개 브랜드
   - 50개국
   - 40개 언어
-  - 2MD -> 1시간
+  - 2MD → 1시간
   - 10MD 내 9개 메뉴
   - React Hook Form Top 20 Contributor
   - 주 1회 기술공유회
@@ -69,8 +69,8 @@ Add or convert a visible card grid with six outcomes:
 Project copy changes from technology listing to problem -> decision -> result. Priority order:
 
 1. KIA/HYUNDAI/GENESIS ONE APP - Back Office
-2. KIA/HYUNDAI/GENESIS ONE APP - Front Office
-3. Global Insight Admin
+2. Global Insight Admin
+3. KIA/HYUNDAI/GENESIS ONE APP - Front Office
 4. PixEngine
 
 Each card and modal should emphasize why the design decision was made and what changed as a result.
@@ -79,9 +79,8 @@ Each card and modal should emphasize why the design decision was made and what c
 
 Open Source order:
 
-1. PixEngine
-2. React Hook Form
-3. Gemini CLI
+1. React Hook Form
+2. Gemini CLI
 
 React Hook Form highlights Top 20 Contributor, `Object.is()` deepEqual fix, and core utility tests. Gemini CLI highlights parser modularization, API mock structure improvement, and MCP Client Manager unhandled promise rejection handling.
 

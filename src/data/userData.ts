@@ -13,7 +13,7 @@ export const userData: User = {
     { number: "3", label: "개 브랜드" },
     { number: "50", label: "개국 서비스" },
     { number: "40", label: "개 언어" },
-    { number: "2MD -> 1시간", label: "요구사항 대응 단축" },
+    { number: "2MD → 1시간", label: "요구사항 대응 단축" },
   ],
   interests: [
     "멀티 브랜드 구조",
@@ -44,7 +44,7 @@ export const brandOutcomes: BrandOutcome[] = [
   },
   {
     title: "유지보수 가능한 구조 설계",
-    metric: "2MD -> 1시간",
+    metric: "2MD → 1시간",
     description:
       "AHA 원칙을 적용해 변경 가능성이 높은 요구사항을 도메인별로 분리하고, 신규 대응 시간을 줄였습니다.",
   },

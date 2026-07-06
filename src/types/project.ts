@@ -6,6 +6,7 @@ export interface Project {
   image: string;
   techStack: string[];
   role?: string;
+  impact: string;
   problem: string;
   decision: string;
   result: string;

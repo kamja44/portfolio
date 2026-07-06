@@ -25,6 +25,7 @@ const Projects: React.FC = () => {
       project.problem.toLowerCase().includes(searchTerm.toLowerCase()) ||
       project.decision.toLowerCase().includes(searchTerm.toLowerCase()) ||
       project.result.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      project.impact.toLowerCase().includes(searchTerm.toLowerCase()) ||
       project.role?.toLowerCase().includes(searchTerm.toLowerCase()) ||
       project.techStack.some((tech) =>
         tech.toLowerCase().includes(searchTerm.toLowerCase())
@@ -188,6 +189,10 @@ const Projects: React.FC = () => {
                       {project.role}
                     </p>
                   )}
+
+                  <div className="inline-flex w-fit items-center rounded-full bg-primary-100 px-3 py-1 text-xs font-semibold text-primary-700 dark:bg-primary-900/30 dark:text-primary-300">
+                    {project.impact}
+                  </div>
 
                   <div className="flex flex-wrap gap-2">
                     {project.techStack.slice(0, 3).map((tech, index) => (
