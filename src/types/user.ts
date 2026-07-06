@@ -25,3 +25,9 @@ export interface SocialLink {
   name: string;
   href: string;
 }
+
+export interface BrandOutcome {
+  title: string;
+  metric: string;
+  description: string;
+}

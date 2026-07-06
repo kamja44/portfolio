@@ -6,7 +6,7 @@ export interface OpenSourceContribution {
   techStack: string[];
   color: string;
   repoUrl: string;
-  stars: number;
+  stars?: number;
   weeklyDownloads?: string;
 }
 

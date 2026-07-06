@@ -1,14 +1,31 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Code2, Rocket, Users, Trophy } from "lucide-react";
-import { userData, aboutContent } from "../data/userData";
+import {
+  Code2,
+  GitPullRequest,
+  Globe2,
+  Layers,
+  Presentation,
+  ShieldCheck,
+  Users,
+  Wrench,
+} from "lucide-react";
+import { userData, aboutContent, brandOutcomes } from "../data/userData";
 
 const About: React.FC = () => {
-  const statIcons = [Code2, Rocket, Users, Trophy];
+  const statIcons = [Globe2, Globe2, Globe2, Wrench];
   const stats = userData.stats.map((stat, index) => ({
     ...stat,
     icon: statIcons[index],
   }));
+  const outcomeIcons = [
+    Globe2,
+    Layers,
+    GitPullRequest,
+    Users,
+    ShieldCheck,
+    Presentation,
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -43,12 +60,11 @@ const About: React.FC = () => {
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="gradient-text">저에 대해서</span>
+              <span className="gradient-text">Profile</span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto mb-6 rounded-full"></div>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Learning. Building. Growing.
-              <br /> 성능과 사용자 경험을 설계하는 프론트엔드 개발자
+              변화하는 요구사항에도 쉽게 대응할 수 있는 구조를 설계합니다
             </p>
           </motion.div>
 
@@ -117,6 +133,49 @@ const About: React.FC = () => {
               </motion.div>
             </motion.div>
           </div>
+
+          <motion.div variants={itemVariants} className="mt-20">
+            <div className="text-center mb-10">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-3">
+                핵심 성과
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                만들었다는 결과보다, 왜 그렇게 설계했고 어떤 변화가 있었는지에
+                집중합니다.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {brandOutcomes.map((outcome, index) => {
+                const Icon = outcomeIcons[index] ?? Code2;
+
+                return (
+                  <motion.div
+                    key={outcome.title}
+                    variants={itemVariants}
+                    whileHover={{ y: -4 }}
+                    className="glass p-6 rounded-2xl hover:shadow-xl transition-all duration-300"
+                  >
+                    <div className="flex items-center justify-between mb-5">
+                      <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-primary-500 to-purple-500 rounded-xl">
+                        <Icon className="w-6 h-6 text-white" />
+                      </div>
+                      <span className="text-xs font-semibold text-primary-600 dark:text-primary-400 bg-primary-100 dark:bg-primary-900/30 px-3 py-1 rounded-full">
+                        {outcome.metric}
+                      </span>
+                    </div>
+
+                    <h4 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3">
+                      {outcome.title}
+                    </h4>
+                    <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+                      {outcome.description}
+                    </p>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

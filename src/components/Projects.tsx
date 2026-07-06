@@ -22,6 +22,10 @@ const Projects: React.FC = () => {
       searchTerm === "" ||
       project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      project.problem.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      project.decision.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      project.result.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      project.role?.toLowerCase().includes(searchTerm.toLowerCase()) ||
       project.techStack.some((tech) =>
         tech.toLowerCase().includes(searchTerm.toLowerCase())
       ) ||
@@ -176,8 +180,14 @@ const Projects: React.FC = () => {
                   </h3>
 
                   <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                    {project.features[0]}
+                    {project.problem}
                   </p>
+
+                  {project.role && (
+                    <p className="text-xs font-semibold text-primary-600 dark:text-primary-400">
+                      {project.role}
+                    </p>
+                  )}
 
                   <div className="flex flex-wrap gap-2">
                     {project.techStack.slice(0, 3).map((tech, index) => (
@@ -373,7 +383,7 @@ const Projects: React.FC = () => {
 
                     <div>
                       <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">
-                        기여도
+                        역할
                       </h4>
                       <p className="text-gray-600 dark:text-gray-400">
                         {selectedProject.progressRate}
@@ -384,7 +394,37 @@ const Projects: React.FC = () => {
 
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-4">
-                    주요 기능
+                    문제와 의사결정
+                  </h4>
+                  <div className="space-y-4 mb-6">
+                    <div>
+                      <p className="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-1">
+                        Problem
+                      </p>
+                      <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        {selectedProject.problem}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-1">
+                        Decision
+                      </p>
+                      <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        {selectedProject.decision}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-1">
+                        Result
+                      </p>
+                      <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        {selectedProject.result}
+                      </p>
+                    </div>
+                  </div>
+
+                  <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-4">
+                    주요 작업
                   </h4>
                   <ul className="space-y-2 mb-6">
                     {selectedProject.features.map(

@@ -3,150 +3,107 @@ import { OpenSourceContribution } from "../types/opensource";
 export const opensourceContributions: OpenSourceContribution[] = [
   {
     id: 1,
-    project: "react-hook-form",
+    project: "PixEngine",
     description:
-      "Performance-focused React form library with minimal re-renders",
-    repoUrl: "https://github.com/react-hook-form/react-hook-form",
-    stars: 41200,
-    weeklyDownloads: "8.5M",
+      "서비스 정책에 따라 이미지 최적화 방식을 선언적으로 제어하는 정책 기반 이미지 최적화 엔진",
+    repoUrl: "https://github.com/pixengine/pixengine",
     prs: [
       {
-        number: 12932,
-        title: "Added unit tests for internal utility functions",
+        number: 1,
+        title: "정책 기반 이미지 최적화 파이프라인 설계",
         description:
-          "Added unit tests for internal utility functions (e.g., live). Focused on ensuring type safety with Ref and HTMLElement handling.",
+          "서비스 요구사항에 따라 포맷, 크기, 품질, 저장 위치를 명시적으로 제어할 수 있는 정책 우선 구조를 설계했습니다.",
+        status: "in-progress",
+        link: "https://github.com/pixengine/pixengine",
+      },
+      {
+        number: 2,
+        title: "교체 가능한 처리 엔진과 스토리지 어댑터 구조",
+        description:
+          "Sharp 기반 처리 엔진과 S3, R2, GCS, Azure Blob Storage를 교체 가능한 모듈로 분리했습니다.",
+        status: "in-progress",
+        link: "https://github.com/pixengine/pixengine",
+      },
+      {
+        number: 3,
+        title: "Express Middleware와 responsive picture helper 제공",
+        description:
+          "애플리케이션에서 최적화 정책을 쉽게 적용할 수 있도록 Express Middleware와 반응형 picture 헬퍼를 제공합니다.",
+        status: "in-progress",
+        link: "https://github.com/pixengine/pixengine",
+      },
+    ],
+    techStack: ["TypeScript", "Node.js", "Sharp", "Express.js", "Storage Adapter"],
+    color: "from-violet-500 to-blue-500",
+  },
+  {
+    id: 2,
+    project: "react-hook-form",
+    description:
+      "React Hook Form Top 20 Contributor로서 폼 라이브러리의 안정성과 테스트 커버리지 개선에 기여",
+    repoUrl: "https://github.com/react-hook-form/react-hook-form",
+    prs: [
+      {
+        number: 13120,
+        title: "fix(deepEqual): handle NaN comparison correctly using Object.is",
+        description:
+          "Object.is()를 활용해 deepEqual이 NaN 비교를 올바르게 처리하지 못하던 문제를 수정했습니다.",
         status: "merged",
-        link: "https://github.com/react-hook-form/react-hook-form/pull/12932",
+        link: "https://github.com/react-hook-form/react-hook-form/pull/13120",
       },
       {
         number: 12934,
         title: "Comprehensive unit tests for hasValidation function",
         description:
-          "Added comprehensive unit tests for hasValidation, covering all validation rule branches and edge cases. Improved type safety by eliminating as any and using type-safe test field definitions.",
+          "hasValidation의 주요 분기와 예외 상황을 검증하는 단위 테스트를 추가해 핵심 유틸리티 안정성을 높였습니다.",
         status: "merged",
         link: "https://github.com/react-hook-form/react-hook-form/pull/12934",
       },
       {
-        number: 13120,
-        title:
-          "fix(deepEqual): handle NaN comparison correctly using Object.is",
+        number: 12932,
+        title: "Added unit tests for internal utility functions",
         description:
-          "Fixed an issue where deepEqual would incorrectly handle NaN comparisons. Implemented Object.is to ensure correct equality checks for NaN values.",
+          "내부 유틸리티 함수의 타입 안전성과 DOM 참조 처리 동작을 검증하는 테스트를 추가했습니다.",
         status: "merged",
-        link: "https://github.com/react-hook-form/react-hook-form/pull/13120",
-      },
-      {
-        number: 12940,
-        title: "Unit tests for utility functions",
-        description:
-          "Added unit tests for unsetEmptyArray, isWeb, and getValidationModes utility functions. Verified their behaviors to ensure reliability across different use cases.",
-        status: "merged",
-        link: "https://github.com/react-hook-form/react-hook-form/pull/12940",
-      },
-      {
-        number: 12967,
-        title: "Unit tests for convertToArrayPayload function",
-        description:
-          "Added unit tests for convertToArrayPayload to verify handling of both array and non-array inputs. Ensures correct wrapping logic and structural equality using toStrictEqual.",
-        status: "merged",
-        link: "https://github.com/react-hook-form/react-hook-form/pull/12967",
-      },
-      {
-        number: 13184,
-        title: "fix: prevent infinite recursion in getDirtyFields",
-        description:
-          "Fixed a stack overflow issue caused by infinite recursion in getDirtyFields when handling circular references in form data.",
-        status: "open",
-        link: "https://github.com/react-hook-form/react-hook-form/pull/13184",
+        link: "https://github.com/react-hook-form/react-hook-form/pull/12932",
       },
     ],
     techStack: ["React", "TypeScript", "Testing", "Form Validation"],
     color: "from-pink-500 to-rose-500",
   },
   {
-    id: 2,
+    id: 3,
     project: "google-gemini/gemini-cli",
-    description: "Official CLI for Google's Gemini AI - Build AI-powered applications from the command line",
+    description:
+      "Google Gemini CLI의 파서 구조, API Mock, MCP Client Manager 안정성 개선에 기여",
     repoUrl: "https://github.com/google-gemini/gemini-cli",
-    stars: 87100,
-    weeklyDownloads: "300K",
     prs: [
-      {
-        number: 4287,
-        title: "Enhanced loadCodeAssist test with realistic mock data",
-        description:
-          "Replaced the TODO in loadCodeAssist test with a realistic LoadCodeAssistResponse mock. Added assertions to validate key response fields like currentTier and allowedTiers.",
-        status: "merged",
-        link: "https://github.com/google-gemini/gemini-cli/pull/4287",
-      },
       {
         number: 4575,
         title: "Unified partToString function for better maintainability",
         description:
-          "Unified partToString to handle both plain text and verbose summary modes, replacing partListUnionToString with a thin wrapper. Consolidated related tests into partUtils.test.ts, removing redundancy and improving maintainability.",
+          "Parser 로직을 독립적으로 다룰 수 있도록 관련 변환 로직을 정리하고 테스트 구조를 개선했습니다.",
         status: "merged",
         link: "https://github.com/google-gemini/gemini-cli/pull/4575",
       },
       {
-        number: 14701,
-        title:
-          "fix(core): handle unhandled promise rejection in mcp-client-manager",
+        number: 4287,
+        title: "Enhanced loadCodeAssist test with realistic mock data",
         description:
-          "Implemented proper error handling for promise rejections in the MCP client manager to prevent application crashes and improve stability.",
+          "API Mock 데이터를 실제 응답 구조에 가깝게 개선해 테스트가 검증하는 필드를 명확히 했습니다.",
+        status: "merged",
+        link: "https://github.com/google-gemini/gemini-cli/pull/4287",
+      },
+      {
+        number: 14701,
+        title: "fix(core): handle unhandled promise rejection in mcp-client-manager",
+        description:
+          "MCP Client Manager에서 unhandled promise rejection이 발생할 수 있는 경로에 오류 처리를 추가했습니다.",
         status: "merged",
         link: "https://github.com/google-gemini/gemini-cli/pull/14701",
       },
     ],
-    techStack: ["TypeScript", "Node.js", "Testing", "API Integration"],
+    techStack: ["TypeScript", "Node.js", "Testing", "MCP"],
     color: "from-blue-500 to-cyan-500",
-  },
-  // {
-  //   id: 3,
-  //   project: "TanStack/query",
-  //   description: "Powerful asynchronous state management for TS/JS",
-  //   repoUrl: "https://github.com/TanStack/query",
-  //   stars: 42800,
-  //   weeklyDownloads: "12M",
-  //   prs: [
-  //     {
-  //       number: 9959,
-  //       title: "fix(query-core): prevent duplicate abort event listeners",
-  //       description:
-  //         "Fixed a potential memory leak by preventing duplicate abort signal event listeners in infinite query observers.",
-  //       status: "open",
-  //       link: "https://github.com/TanStack/query/pull/9959",
-  //     },
-  //   ],
-  //   techStack: ["TypeScript", "Query Core", "State Management"],
-  //   color: "from-red-500 to-orange-500",
-  // },
-  {
-    id: 3,
-    project: "shadcn-ui",
-    description:
-      "Beautifully designed components built with Radix UI and Tailwind CSS",
-    repoUrl: "https://github.com/shadcn-ui/ui",
-    stars: 78500,
-    weeklyDownloads: "2.8M",
-    prs: [
-      {
-        number: 9184,
-        title: "fix(cli): add cache to getTargetStyleFromConfig",
-        description:
-          "Implemented caching for getTargetStyleFromConfig function to prevent redundant calls to getProjectInfo(). Eliminates redundant operations and improves overall CLI performance by returning cached results when available.",
-        status: "open",
-        link: "https://github.com/shadcn-ui/ui/pull/9184",
-      },
-      {
-        number: 9188,
-        title: "feat(ui): add Timeline component",
-        description:
-          "Introduced a new Timeline component to shadcn/ui v4 with multiple layout positions (left, right, alternate, center), flexible marker variants, icon support, and full accessibility. Includes comprehensive documentation and four example implementations.",
-        status: "open",
-        link: "https://github.com/shadcn-ui/ui/pull/9188",
-      },
-    ],
-    techStack: ["React", "TypeScript", "CLI", "Tailwind CSS"],
-    color: "from-slate-800 to-black",
   },
 ];

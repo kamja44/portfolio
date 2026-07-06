@@ -52,17 +52,18 @@ const Hero: React.FC = () => {
           {/* Greeting */}
           <motion.div variants={itemVariants} className="mb-6">
             <span className="inline-block px-4 py-2 bg-primary-100/50 dark:bg-primary-900/20 text-primary-600 dark:text-primary-400 rounded-full text-sm font-medium backdrop-blur-sm border border-primary-200/30 dark:border-primary-700/30">
-              💻 Software Engineer
+              Frontend Engineer · Structure & Collaboration
             </span>
           </motion.div>
 
           {/* Name */}
           <motion.h1
             variants={itemVariants}
-            className="text-5xl md:text-7xl font-bold mb-6"
+            className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
           >
-            저는 <span className="gradient-text">{userData.name}</span>
-            입니다
+            멀티 브랜드와 다국어 서비스의 복잡성을{" "}
+            <span className="gradient-text">안정적인 구조</span>로
+            설계합니다
           </motion.h1>
 
           {/* Title */}
@@ -70,7 +71,7 @@ const Hero: React.FC = () => {
             variants={itemVariants}
             className="text-2xl md:text-3xl font-semibold text-gray-600 dark:text-gray-300 mb-8"
           >
-            {userData.jobTitle}
+            {userData.name} · {userData.jobTitle}
           </motion.h2>
 
           <motion.p

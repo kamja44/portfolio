@@ -98,11 +98,13 @@ const OpenSource: React.FC = () => {
 
                     {/* GitHub Stats */}
                     <div className="flex items-center gap-6 mb-4">
-                      <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                        <Star size={16} className="text-yellow-500 fill-yellow-500" />
-                        <span className="text-sm font-semibold">{project.stars.toLocaleString()}</span>
-                        <span className="text-xs text-gray-500 dark:text-gray-400">stars</span>
-                      </div>
+                      {typeof project.stars === "number" && (
+                        <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+                          <Star size={16} className="text-yellow-500 fill-yellow-500" />
+                          <span className="text-sm font-semibold">{project.stars.toLocaleString()}</span>
+                          <span className="text-xs text-gray-500 dark:text-gray-400">stars</span>
+                        </div>
+                      )}
                       {project.weeklyDownloads && (
                         <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
                           <Download size={16} className="text-green-500" />
@@ -128,7 +130,7 @@ const OpenSource: React.FC = () => {
                 {/* Pull Requests */}
                 <div className="space-y-4">
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
-                    Pull Requests ({project.prs.length})
+                    주요 기여 ({project.prs.length})
                   </h4>
                   {project.prs.map((pr, prIndex) => (
                     <motion.div

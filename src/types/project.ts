@@ -5,6 +5,10 @@ export interface Project {
   stack: "Front-End" | "Full-Stack" | "Back-End" | "Open Source";
   image: string;
   techStack: string[];
+  role?: string;
+  problem: string;
+  decision: string;
+  result: string;
   progressRate: string;
   duration: string;
   link: string;
